@@ -4,7 +4,7 @@
   "description": "TypeScript types for the FHIR R4 specification",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc",
+    "build": "tsc && cp src/*.d.ts types",
     "test": "jest",
     "clean": "rimraf lib/*",
     "publish-me": "npm run clean && npm version patch && tsc -p . && npm publish",

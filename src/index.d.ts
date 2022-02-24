@@ -830,6 +830,7 @@ export { IResearchStudy, ResearchStudyStatusKind } from "./ResearchStudy";
 export { IResearchStudy_Arm } from "./ResearchStudy_Arm";
 export { IResearchStudy_Objective } from "./ResearchStudy_Objective";
 export { IResearchSubject, ResearchSubjectStatusKind } from "./ResearchSubject";
+export { IResourceList } from "./ResourceList";
 export { IRiskAssessment } from "./RiskAssessment";
 export { IRiskAssessment_Prediction } from "./RiskAssessment_Prediction";
 export {
