@@ -1,6 +1,6 @@
 {
   "name": "@story-health/fhir-r4",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript types for the FHIR R4 specification",
   "scripts": {
     "build": "tsc && cp src/*.d.ts types",
