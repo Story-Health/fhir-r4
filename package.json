@@ -1,9 +1,7 @@
 {
-  "name": "@ahryman40k/ts-fhir-types",
-  "version": "4.0.38",
-  "description": "",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "name": "@story-health/fhir-r4",
+  "version": "1.0.0",
+  "description": "TypeScript types for the FHIR R4 specification",
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
@@ -14,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Ahryman40k/typescript-fhir-types.git"
+    "url": "git@github.com:Story-Health/fhir-r4.git"
   },
   "keywords": [],
   "license": "MIT",
