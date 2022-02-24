@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "TypeScript types for the FHIR R4 specification",
   "scripts": {
-    "prepare": "npm run build",
     "build": "tsc && cp src/*.d.ts types",
-    "test": "jest",
-    "clean": "rimraf lib/*",
-    "publish-me": "npm run clean && npm version patch && tsc -p . && npm publish",
-    "publish-coverage": "codecov --token=50ac9b8a-5b64-40a3-bac5-721272f90c71"
+    "clean": "rm -rf types && rm -f *.ts && rm -rf *.js",
+    "prepack": "npm run clean && npm run build && mv types/* .",
+    "postpack": "npm run clean"
   },
   "repository": {
     "type": "git",
@@ -20,6 +18,7 @@
     "typescript": "^4.5.5"
   },
   "files": [
-    "lib"
+    "*.js",
+    "*.ts"
   ]
 }
