@@ -38,6 +38,16 @@ export enum TaskIntentKind {
   _instanceOrder = "instance-order",
   _option = "option",
 }
+// N.B. This is what we've been using for setting the priority field on a Task in the core repo. 
+// By the FHIR spec, priority is actually a Code field, https://hl7.org/fhir/R4/task-definitions.html#Task.priority, 
+// where the appropriate code options should be from this valueset: from https://hl7.org/fhir/R4/valueset-request-priority.html
+// We have been using the upper case subset defined below throughout our code, which doesn't match the spec. 
+// To ensure we use only expected values for the field, we are updating the priority field type here to use this enum.
+export enum RequestPriority {
+    STAT = 'STAT',
+    URGENT = 'URGENT',
+    ROUTINE = 'ROUTINE',
+}
 
 export interface ITask extends IDomainResource {
   /**
@@ -165,7 +175,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   /**
    * Indicates how quickly the Task should be addressed with respect to other requests.
    */
-  priority?: string;
+  priority?: RequestPriority;
 
   /**
    * Extensions for priority
