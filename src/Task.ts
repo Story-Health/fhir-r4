@@ -38,6 +38,13 @@ export enum TaskIntentKind {
   _instanceOrder = "instance-order",
   _option = "option",
 }
+// https://hl7.org/fhir/R4/valueset-request-priority.html
+export enum RequestPriority {
+    routine = 'routine',
+    urgent = 'urgent',
+    asap = 'asap',
+    stat = 'stat',
+}
 
 export interface ITask extends IDomainResource {
   /**
@@ -165,7 +172,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   /**
    * Indicates how quickly the Task should be addressed with respect to other requests.
    */
-  priority?: string;
+  priority?: RequestPriority;
 
   /**
    * Extensions for priority
