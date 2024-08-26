@@ -40,10 +40,10 @@ export enum TaskIntentKind {
 }
 // https://hl7.org/fhir/R4/valueset-request-priority.html
 export enum RequestPriority {
-    routine = 'routine',
-    urgent = 'urgent',
-    asap = 'asap',
-    stat = 'stat',
+    _routine = 'routine',
+    _urgent = 'urgent',
+    _asap = 'asap',
+    _stat = 'stat',
 }
 
 export interface ITask extends IDomainResource {
